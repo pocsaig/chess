@@ -36,12 +36,24 @@ export function DartListPage() {
                                         className="img-fluid"
                                         style={{ maxHeight: 200 }}
                                         src={darts.image_url ? darts.image_url :
-                                            "https://via.placeholder.com/400x800"} /></NavLink>
+                                            "https://via.placeholder.com/400x800"} />
+                                </NavLink>
                                 <br />
-                                <NavLink to={darts.profile_url} target="_blank">Wikipédia link</NavLink><br />
-                                <NavLink to={"/mod-darts/" + darts.id}>
-                                    <i className="bi bi-pencil"></i></NavLink> &nbsp;&nbsp;
-                                    <NavLink to={"/del-darts/" + darts.id}><i className="bi bi-trash3"></i></NavLink>
+                                <br />
+                                <NavLink className={"btn btn-success"} to={darts.profile_url} target="_blank">
+                                    Wikipédia link
+                                </NavLink>
+                                <br />
+                                <br />
+                                <NavLink className={"btn btn-primary"} to={"/darts/" + darts.id}>
+                                    <i class="bi bi-list-nested"></i>
+                                </NavLink> &nbsp;&nbsp;
+                                <NavLink className={"btn btn-warning"} to={"/mod-darts/" + darts.id}>
+                                    <i className="bi bi-pencil"></i>
+                                </NavLink> &nbsp;&nbsp;
+                                <NavLink className={"btn btn-danger"} to={"/del-darts/" + darts.id}>
+                                    <i className="bi bi-trash3"></i>
+                                </NavLink>
                             </div>
                         </div>
 

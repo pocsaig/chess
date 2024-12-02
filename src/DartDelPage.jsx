@@ -57,9 +57,9 @@ export function DartDelPage(props) {
             .catch(console.log);
             }}>
                               <div>
-<NavLink to={"/"}><button className="bi bi-backspace">&nbsp;Mégsem</button></NavLink>
+<NavLink to={"/"}><button className="bi bi-list-nested btn btn-warning">&nbsp;Vissza</button></NavLink>
 &nbsp;&nbsp;
-<button className="bi bi-trash3">&nbsp;Törlés</button></div></form>   
+<button className="bi bi-trash3 btn btn-danger">&nbsp;Törlés</button></div></form>   
                         </div>
                     
                 )}

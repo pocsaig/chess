@@ -29,7 +29,8 @@ export function DartSinglePage() {
                                 <div className="card-body">
                                 <h5 className="card-title">Sakkozó neve: {darts.name}</h5>
                                 <div className="lead">Születési dátuma: {darts.birth_date}</div>
-                                <div className="lead">Nyert világbajnokságok: {darts.world_ch_won}</div>
+                                <div className="lead">Nyert világbajnokságok: {darts.world_ch_won}</div> <br />
+                                <div><NavLink className={"btn btn-success"} to={darts.profile_url}  target="_blank">{"Profil link"}</NavLink></div> <br />
                                     <img alt={darts.name}
                                     className="img-fluid rounded"
                                     style={{maxHeight: "500px"}}
@@ -37,9 +38,11 @@ export function DartSinglePage() {
                                     "https://via.placeholder.com/400x800"} 
                                     />
                                   </div>
-                                  <div><NavLink to={darts.profile_url}  target="_blank">{darts.profile_url}</NavLink></div><br/>
-                                  <div><NavLink to="/"><i className="bi bi-backspace"></i></NavLink> &nbsp;&nbsp;&nbsp;
-<NavLink key="y" to={"/mod-darts/" + darts.id}><i className="bi bi-pencil"></i></NavLink></div>   
+                                  <br/>
+                                  <div><NavLink to="/"><i className="bi bi-list-nested btn btn-primary"></i></NavLink> &nbsp;&nbsp;&nbsp;
+                                <NavLink key="y" to={"/mod-darts/" + darts.id}><i className="bi bi-pencil btn btn-warning"></i></NavLink>&nbsp; &nbsp;&nbsp;
+                                <NavLink key="y" to={"/del-darts/" + darts.id}><i className="bi bi-trash3 btn btn-danger"></i></NavLink></div>  
+                                
                             </div>
                         
                     )}
